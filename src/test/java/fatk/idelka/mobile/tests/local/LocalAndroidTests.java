@@ -19,7 +19,7 @@ public class LocalAndroidTests extends LocalTestBase {
     void checkOpenedArticleIsCorrect(){
         step("Types search article", () -> {
 //            Configuration.timeout = 60000;
-            $(AppiumBy.accessibilityId("cart badge")).click();
+            $(AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"cart badge\"]")).click();
             $(AppiumBy.accessibilityId("Go Shopping button")).shouldBe(visible);
         });
 
