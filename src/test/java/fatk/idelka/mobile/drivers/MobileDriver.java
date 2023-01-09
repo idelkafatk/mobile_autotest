@@ -41,17 +41,16 @@ public class MobileDriver implements WebDriverProvider {
                 .setDeviceName(Mobile.config.device())
                 .setPlatformVersion(Mobile.config.osVersion())
                 .setApp(getAppPath())
-                .setAppPackage("org.wikipedia.alpha")
-                .setAppActivity("org.wikipedia.main.MainActivity");
-
+                .setAppPackage("com.saucelabs.mydemoapp.rn")
+                .setAppActivity("com.saucelabs.mydemoapp.rn.MainActivity");
         return new RemoteWebDriver(getAppiumServerUrl(), options);
     }
 
     private String getAppPath() {
-        String appUrl = "https://github.com/wikimedia/apps-android-wikipedia/" +
-                "releases/download/latest/app-alpha-universal-release.apk";
+        String appUrl = "https://github.com/saucelabs/my-demo-app-rn/releases/" +
+                "download/v1.3.0/Android-MyDemoAppRN.1.3.0.build-244.apk";
 
-        String appPath = "src/test/resources/apps/app-alpha-universal-release.apk";
+        String appPath = "src/test/resources/apps/Android-MyDemoAppRN.1.3.0.build-244.apk";
 
         File app = new File(appPath);
         if (!app.exists()) {
