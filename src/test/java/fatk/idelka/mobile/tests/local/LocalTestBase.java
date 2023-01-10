@@ -7,9 +7,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
-import static fatk.idelka.mobile.helpers.Attachments.*;
+import static fatk.idelka.mobile.helpers.Attachments.pageSource;
+import static fatk.idelka.mobile.helpers.Attachments.screenshotAs;
 
 public class LocalTestBase {
     @BeforeAll
@@ -28,7 +30,7 @@ public class LocalTestBase {
     public void tearDown() {
         screenshotAs("Last screenshot");
         pageSource();
-
         closeWebDriver();
+//        addVideo(sessionId().toString());
     }
 }

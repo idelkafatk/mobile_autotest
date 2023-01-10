@@ -41,6 +41,7 @@ dependencies {
             "org.aeonbits.owner:owner:$ownerVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "io.appium:java-client:$appiumVersion",
+//            "com.codeborne:selenide-appium:2.5.2",
             "commons-io:commons-io:$commonsIoVersion",
             "com.github.javafaker:javafaker:$javaFakerVersion",
             "org.assertj:assertj-core:$assertJVersion",
